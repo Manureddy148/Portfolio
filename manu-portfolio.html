@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Manu Manjunath K R — AI/ML Engineer</title>
+<meta name="description" content="AI/ML engineer building agentic LLM systems and production ML for healthcare revenue cycle management.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#E9EBE6;
+  --ink:#10262B;
+  --ink-soft:#3C5257;
+  --muted:#6E8286;
+  --rule:#C6CCC5;
+  --accent:#9A6B00;
+  --accent-bright:#C9930C;
+  --card:#F2F3EF;
+  --curve:#10262B;
+}
+:root:not([data-theme="light"]){
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0F2429;
+    --ink:#E4E9E5;
+    --ink-soft:#B3C2C0;
+    --muted:#7C918F;
+    --rule:#22434A;
+    --accent:#D8B70A;
+    --accent-bright:#E9CB3E;
+    --card:#153037;
+    --curve:#D8B70A;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0F2429;
+  --ink:#E4E9E5;
+  --ink-soft:#B3C2C0;
+  --muted:#7C918F;
+  --rule:#22434A;
+  --accent:#D8B70A;
+  --accent-bright:#E9CB3E;
+  --card:#153037;
+  --curve:#D8B70A;
+  color-scheme:dark;
+}
+
+*{box-sizing:border-box;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"Source Serif 4", Georgia, "Times New Roman", serif;
+  font-size:17px;
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;}
+
+.shell{
+  max-width:1180px;
+  margin:0 auto;
+  padding:0 28px 96px;
+  display:grid;
+  grid-template-columns:236px minmax(0,1fr);
+  gap:64px;
+  align-items:start;
+}
+
+/* ---------- left rail ---------- */
+.rail{
+  position:sticky;
+  top:0;
+  padding:56px 0 40px;
+  font-family:"Archivo", system-ui, sans-serif;
+}
+.rail .who{
+  font-weight:700;
+  font-size:19px;
+  line-height:1.25;
+  letter-spacing:-0.02em;
+  margin:0 0 4px;
+}
+.rail .role{
+  font-family:"Archivo", system-ui, sans-serif;
+  font-size:14px;
+  color:var(--muted);
+  margin:0 0 28px;
+  line-height:1.45;
+}
+nav ol{list-style:none;margin:0;padding:0;}
+nav li{margin:0 0 2px;}
+nav a{
+  display:block;
+  padding:5px 0 5px 16px;
+  border-left:2px solid var(--rule);
+  font-size:14.5px;
+  text-decoration:none;
+  color:var(--ink-soft);
+  transition:border-color .15s, color .15s;
+}
+nav a:hover, nav a:focus-visible{color:var(--ink);border-left-color:var(--accent);}
+.rail-contact{
+  margin-top:28px;
+  padding-top:20px;
+  border-top:1px solid var(--rule);
+  font-size:14px;
+  color:var(--muted);
+}
+.rail-contact a{display:block;color:var(--ink-soft);text-decoration:none;padding:3px 0;}
+.rail-contact a:hover,.rail-contact a:focus-visible{color:var(--accent);text-decoration:underline;}
+
+/* ---------- main ---------- */
+main{padding-top:56px;min-width:0;}
+
+.hero{margin-bottom:20px;}
+.hero h1{
+  font-family:"Archivo", system-ui, sans-serif;
+  font-weight:700;
+  letter-spacing:-0.035em;
+  line-height:0.95;
+  font-size:clamp(44px,7.4vw,86px);
+  margin:0 0 22px;
+}
+.hero p.lede{
+  font-size:clamp(19px,2.1vw,22px);
+  line-height:1.5;
+  max-width:33em;
+  margin:0 0 30px;
+  color:var(--ink);
+}
+.hero p.lede em{font-style:normal;color:var(--accent);}
+
+.curve{
+  width:100%;
+  height:auto;
+  display:block;
+  margin:36px 0 8px;
+  border-top:1px solid var(--rule);
+  border-bottom:1px solid var(--rule);
+  padding:22px 0 8px;
+}
+.curve .step{
+  fill:none;
+  stroke:var(--curve);
+  stroke-width:2;
+  stroke-linejoin:miter;
+  stroke-dasharray:900;
+  stroke-dashoffset:900;
+  animation:draw 1.9s cubic-bezier(.2,.7,.3,1) .25s forwards;
+}
+.curve .censor{stroke:var(--curve);stroke-width:2;opacity:0;animation:pop .01s linear 1.5s forwards;}
+.curve text{
+  font-family:"Archivo",system-ui,sans-serif;
+  font-size:11.5px;
+  fill:var(--muted);
+}
+@keyframes draw{to{stroke-dashoffset:0;}}
+@keyframes pop{to{opacity:1;}}
+@media (prefers-reduced-motion: reduce){
+  .curve .step{animation:none;stroke-dashoffset:0;}
+  .curve .censor{animation:none;opacity:1;}
+}
+.curve-note{
+  font-size:14px;
+  color:var(--muted);
+  margin:0 0 60px;
+  max-width:44em;
+}
+
+section{margin-bottom:64px;scroll-margin-top:24px;}
+h2{
+  font-family:"Archivo",system-ui,sans-serif;
+  font-weight:600;
+  font-size:15px;
+  letter-spacing:0.01em;
+  color:var(--muted);
+  margin:0 0 20px;
+  padding-bottom:9px;
+  border-bottom:1px solid var(--rule);
+}
+h3{
+  font-family:"Archivo",system-ui,sans-serif;
+  font-weight:600;
+  font-size:20px;
+  letter-spacing:-0.015em;
+  margin:0 0 3px;
+  line-height:1.25;
+}
+h3 .at{color:var(--accent);}
+
+.meta{
+  font-family:"Archivo",system-ui,sans-serif;
+  font-size:13.5px;
+  color:var(--muted);
+  margin:0 0 14px;
+}
+
+.entry{margin-bottom:38px;}
+.entry:last-child{margin-bottom:0;}
+.entry ul{margin:0;padding-left:20px;}
+.entry li{margin-bottom:10px;max-width:66ch;}
+.entry li::marker{color:var(--accent);}
+.entry p{margin:0 0 12px;max-width:66ch;}
+
+.work{
+  display:grid;
+  gap:1px;
+  background:var(--rule);
+  border:1px solid var(--rule);
+}
+.work article{
+  background:var(--card);
+  padding:24px 26px;
+}
+.work article p{margin:8px 0 0;max-width:64ch;color:var(--ink-soft);}
+.work .tags{
+  font-family:"Archivo",system-ui,sans-serif;
+  font-size:13px;
+  color:var(--muted);
+  margin-top:12px;
+}
+
+.kit{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px 34px;}
+.kit div h4{
+  font-family:"Archivo",system-ui,sans-serif;
+  font-size:14px;
+  font-weight:600;
+  margin:0 0 5px;
+  color:var(--accent);
+}
+.kit div p{margin:0;font-size:15.5px;line-height:1.5;color:var(--ink-soft);}
+
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:28px;}
+
+footer{
+  border-top:1px solid var(--rule);
+  padding-top:26px;
+  font-family:"Archivo",system-ui,sans-serif;
+  font-size:15px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px 26px;
+  align-items:baseline;
+}
+footer a{color:var(--accent);text-decoration:none;border-bottom:1px solid transparent;}
+footer a:hover,footer a:focus-visible{border-bottom-color:var(--accent);}
+footer span{color:var(--muted);}
+
+:focus-visible{outline:2px solid var(--accent-bright);outline-offset:3px;}
+
+@media (max-width:880px){
+  .shell{grid-template-columns:1fr;gap:0;padding:0 22px 72px;}
+  .rail{position:static;padding:34px 0 0;}
+  .rail nav{display:none;}
+  .rail .who{font-size:16px;}
+  .rail .role{margin-bottom:0;}
+  .rail-contact{display:flex;flex-wrap:wrap;gap:4px 18px;margin-top:18px;}
+  main{padding-top:34px;}
+  body{font-size:16.5px;}
+  .work article{padding:20px;}
+}
+</style>
+</head>
+<body>
+<div class="shell">
+
+  <aside class="rail">
+    <p class="who">Manu Manjunath K R</p>
+    <p class="role">AI/ML engineer — healthcare RCM, agentic LLM systems</p>
+    <nav aria-label="Sections">
+      <ol>
+        <li><a href="#now">Building now</a></li>
+        <li><a href="#work">Selected work</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#earlier">Earlier</a></li>
+        <li><a href="#toolkit">Toolkit</a></li>
+        <li><a href="#background">Background</a></li>
+      </ol>
+    </nav>
+    <div class="rail-contact">
+      <a href="mailto:manureddy820@gmail.com">manureddy820@gmail.com</a>
+      <a href="tel:+917411698280">+91 74116 98280</a>
+      <a href="https://github.com/Manureddy148" target="_blank" rel="noopener">github.com/Manureddy148</a>
+    </div>
+  </aside>
+
+  <main>
+    <header class="hero">
+      <h1>Systems that<br>keep running.</h1>
+      <p class="lede">I build agentic LLM workflows and production ML for healthcare revenue cycle management — claims that resolve, appeals that get filed, pipelines that run unattended.</p>
+    </header>
+
+    <svg class="curve" viewBox="0 0 760 132" role="img" aria-label="Stepped survival curve showing the share of insurance claims still unresolved as days pass after submission.">
+      <line x1="0" y1="112" x2="760" y2="112" stroke="var(--rule)" stroke-width="1"/>
+      <path class="step" d="M0,14 L96,14 L96,30 L168,30 L168,42 L246,42 L246,58 L318,58 L318,66 L402,66 L402,80 L486,80 L486,86 L566,86 L566,96 L646,96 L646,100 L760,100"/>
+      <line class="censor" x1="402" y1="60" x2="402" y2="72"/>
+      <line class="censor" x1="566" y1="80" x2="566" y2="92"/>
+      <line class="censor" x1="646" y1="94" x2="646" y2="106"/>
+      <text x="0" y="128">day 0</text>
+      <text x="336" y="128">day 60</text>
+      <text x="706" y="128">day 120</text>
+    </svg>
+    <p class="curve-note">The curve above is the shape my work lives inside: how long a claim stays open, and what it costs when it stays open too long.</p>
+
+    <section id="now">
+      <h2>Building now</h2>
+      <div class="entry">
+        <h3>AI/ML Intern <span class="at">— SHAI</span></h3>
+        <p class="meta">Enterprise healthcare Revenue Cycle Management · Bengaluru · Jun 2026 – present · sole AI/ML intern</p>
+        <ul>
+          <li><strong>ClaimGuard</strong> — an end-to-end Python pipeline predicting AR recovery timelines and denial/write-off risk on de-identified clinical claims, using dual-track modeling: Cox proportional hazards for open and censored claims, XGBoost for resolved ones.</li>
+          <li>Engineered temporal train/validation/test splits, frequency encoding for high-cardinality categoricals, and HMAC-SHA256 Safe Harbor de-identification so real clinical data stays HIPAA-safe throughout.</li>
+          <li>Contributed to a first-response prediction system — five staged classification and survival models forecasting turnaround at each RCM stage, with a refresh agent handling daily scoring and monthly retraining.</li>
+          <li>Built an agentic LLM workflow for the insurance appeal and authorization portal: reads clinical documentation and payor rules, then drafts and files prior-authorization appeals through a configurable payor-template engine.</li>
+          <li>Shipped backend services across the RCM stack, including a Django hiring-workflow portal and an employee survey tool, presented in a 14-slide architecture review.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="work">
+      <h2>Selected work</h2>
+      <div class="work">
+        <article>
+          <h3>Argus — large-scale async LLM ingestion</h3>
+          <p>An asyncio/aiohttp backend that crawls and extracts across arXiv, Hugging Face, YC and Greenhouse/Lever/Ashby, designed to reach 500,000+ records unattended. Decoupled discovery and extraction queues keep memory flat under load; a three-tier LLM fallback chain (Gemini Flash → Groq GPT-OSS 120B → DeepSeek) with token-bucket limiting and full-jitter backoff escalates on its own so no failure class needs a human. Deduplication is atomic and idempotent via canonical URL fingerprinting plus a two-phase freshness gate, guaranteeing exactly-once processing across concurrent workers. Outputs land as a knowledge graph — PostgreSQL as system of record, projected into Neo4j edges and pgvector embeddings for multi-hop queries.</p>
+          <p class="tags">asyncio · aiohttp · PostgreSQL · Neo4j · pgvector · 21 unit tests under GitHub Actions CI</p>
+        </article>
+        <article>
+          <h3>Multimodal RAG for chest X-ray reporting</h3>
+          <p>A retrieval-augmented diagnostic pipeline: BiomedCLIP encodes the X-ray, a FAISS index grounds findings against retrieved reference cases, and pathologies are detected and localized before a structured report is generated. Flan-T5-Base, LoRA fine-tuned, reaches BLEU-4 of 30.70%. Deployed via Gradio with confidence scoring.</p>
+          <p class="tags">BiomedCLIP · FAISS · LoRA · Flan-T5 · Gradio</p>
+        </article>
+        <article>
+          <h3>Glucose Agent — clinical monitoring co-pilot</h3>
+          <p>An agent that reads CGM sensor streams for real-time multimodal pattern detection and proactive reporting, closes an automated insulin-delivery loop, and reaches patients through WhatsApp via the Twilio API.</p>
+          <p class="tags">GPT-4o · Gemini 2.0 Flash · Twilio · CGM streams</p>
+        </article>
+        <article>
+          <h3>Cloud-native face recognition attendance</h3>
+          <p>End-to-end recognition with DeepFace and MTCNN, embeddings from a Vision Transformer, containerized and deployed on GCP Cloud Run behind a full GitHub Actions CI/CD pipeline with MongoDB and Firestore persistence.</p>
+          <p class="tags">DeepFace · MTCNN · ViT · Docker · GCP Cloud Run</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="research">
+      <h2>Research</h2>
+      <div class="entry">
+        <h3>Explanation-conditioned retrieval for multi-disease clinical severity</h3>
+        <p class="meta">IEEE, co-author — with Kshitij S. Gharat and Dr. Gitanjali Jayaraman, VIT</p>
+        <ul>
+          <li>A seven-layer clinical decision-support architecture that reuses signed SHAP attribution vectors as retrieval queries, replacing narrative-conditioned RAG with attribution-conditioned RAG across diabetes, heart disease and pneumonia models.</li>
+          <li>A four-method model contract admitting heterogeneous estimators — XGBoost with TreeSHAP alongside rule-based scoring — behind a single router with explicit HTTP 422 abstention for out-of-domain cases.</li>
+          <li>Quantified paraphrase invariance of attribution-conditioned queries (Jaccard 1.000 against 0.115 for narrative conditioning) and the TreeSHAP latency cost at 69–78× the underlying prediction, showing batching cuts per-patient attribution cost by 136×.</li>
+        </ul>
+      </div>
+      <div class="entry">
+        <h3>Real-time traffic sign classification</h3>
+        <p class="meta">IEEE, Scopus indexed</p>
+        <p>A hybrid LeNet-5 CNN tuned for high-speed inference in autonomous-driving contexts, optimizing a lightweight architecture for real-time detection.</p>
+      </div>
+    </section>
+
+    <section id="earlier">
+      <h2>Earlier</h2>
+      <div class="entry">
+        <h3>Jr. Performance Tester <span class="at">— Charles Hudson Technologies</span></h3>
+        <p class="meta">Bangalore · Dec 2024 – Apr 2025</p>
+        <ul>
+          <li>Simulated high-load scenarios for systems with 4,000+ concurrent users using Apache JMeter and LoadRunner.</li>
+          <li>Cut response times 25–40% through bottleneck analysis in Grafana and Dynatrace; optimized backend APIs and frontend components for 20% lower CPU and 30% faster page loads.</li>
+          <li>Ran regular API and UI regression testing, holding 99.9% uptime through peak usage.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="toolkit">
+      <h2>Toolkit</h2>
+      <div class="kit">
+        <div><h4>Languages</h4><p>Python, SQL, Java, JavaScript, C/C++</p></div>
+        <div><h4>Backend &amp; distributed</h4><p>Django, Flask, REST APIs, asyncio, aiohttp, Playwright, Redis, PostgreSQL</p></div>
+        <div><h4>ML &amp; LLM</h4><p>PyTorch, TensorFlow, HuggingFace, Transformers, RAG, embeddings, LoRA fine-tuning, LangChain, LangGraph, CrewAI, MCP</p></div>
+        <div><h4>Applied ML</h4><p>XGBoost, scikit-learn, SHAP and TreeSHAP, survival analysis (CoxPH), feature engineering, clinical NLP</p></div>
+        <div><h4>Data &amp; vector stores</h4><p>PostgreSQL, Neo4j, pgvector, FAISS, pandas</p></div>
+        <div><h4>MLOps &amp; monitoring</h4><p>Docker, GCP Cloud Run, GitHub Actions, pytest, MongoDB, Firestore, Gradio, JMeter, LoadRunner, Dynatrace, Grafana</p></div>
+      </div>
+    </section>
+
+    <section id="background">
+      <h2>Background</h2>
+      <div class="two">
+        <div class="entry">
+          <h3>Education</h3>
+          <p class="meta">Vellore Institute of Technology · Jul 2025 – May 2027</p>
+          <p>M.Sc. in Artificial Intelligence and Machine Learning</p>
+          <p class="meta" style="margin-top:16px">New Horizon College of Engineering · Jul 2019 – Jun 2023</p>
+          <p>B.E. in Computer Science and Engineering</p>
+        </div>
+        <div class="entry">
+          <h3>Achievements</h3>
+          <p>Amazon Hackathon (Unstop) 2025 — 41st globally out of 10,000+ teams, top 50 national finalist.</p>
+          <p>Industry Conclave Hackathon, VIT 2026 — led department-level coordination, logistics and technical evaluation.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <span>Open to AI/ML engineering roles.</span>
+      <a href="mailto:manureddy820@gmail.com">Email</a>
+      <a href="https://github.com/Manureddy148" target="_blank" rel="noopener">GitHub</a>
+      <a href="tel:+917411698280">Call</a>
+    </footer>
+  </main>
+
+</div>
+</body>
+</html>
